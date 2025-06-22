@@ -1,0 +1,22 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Chats {
+  id       Int    @id @default(autoincrement())
+  username String
+  text     String
+  roomId   String
+  room     Rooms  @relation(fields: [roomId], references: [roomId])
+}
+
+model Rooms {
+  id     Int     @id @default(autoincrement())
+  roomId String  @unique
+  chats  Chats[]
+}

@@ -1,0 +1,24 @@
+{
+  "name": "socket-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/socket.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc -b && node ./dist/socket.js",
+    "build": "tsc",
+    "start": "node ./dist/socket.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@repo/db-config": "workspace:*"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": {
+    "@types/ws": "^8.18.1",
+    "ws": "^8.18.2"
+  }
+}

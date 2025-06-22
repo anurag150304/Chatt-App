@@ -2,9 +2,15 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "./base.json",
   "compilerOptions": {
-    "plugins": [{ "name": "next" }],
-    "module": "ESNext",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "module": "esnext",
     "moduleResolution": "Bundler",
+    "target": "esnext",
+    "noImplicitAny": true,
     "allowJs": true,
     "jsx": "preserve",
     "noEmit": true

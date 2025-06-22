@@ -1,0 +1,6 @@
+{
+  "extends": "@repo/typescript-config/backend.json",
+  "exclude": [
+    "node_modules"
+  ]
+}
