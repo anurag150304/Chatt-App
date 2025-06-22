@@ -6,7 +6,7 @@ export const SocketProvider = ({ children }: { children: ReactNode }) => {
     const socket = useRef<WebSocket | null>(null);
     const chatBox = useContext(ChatBoxContext);
     useEffect(() => {
-        socket.current = new WebSocket("ws://localhost:8080");
+        socket.current = new WebSocket(process.env.NEXT_PUBLIC_SOCKET_URL as string);
         socket.current.onopen = () => console.log("Socked Connected");
         socket.current.onmessage = (event) => {
             const data = JSON.parse(event.data);
