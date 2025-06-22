@@ -1,4 +1,4 @@
-# Turborepo Tailwind CSS starter
+# Chatt APP with Turborepo
 
 This Turborepo starter is maintained by the Turborepo core team.
 
